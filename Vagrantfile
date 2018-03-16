@@ -30,7 +30,7 @@ end
 ##
 ######
 
-max_memory = 1536
+max_memory = 2048
 
 Vagrant.configure(2) do |config|
 
@@ -40,9 +40,7 @@ Vagrant.configure(2) do |config|
         vebs.vm.box = "ubuntu/trusty64"
 
         # set up network configuration
-        vebs.vm.network :forwarded_port, guest: 80,  host: 10080
-        vebs.vm.network :forwarded_port, guest: 443, host: 10443
-
+        vebs.vm.network :forwarded_port, guest: 80,  host: 10079
         vebs.vm.network "private_network", ip: "192.168.40.40"
 
         ####

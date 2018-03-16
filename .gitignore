@@ -1,34 +1,12 @@
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-
-# Logs and databases #
-######################
-*.log
-*.sql
-
-# OS generated files #
-######################
-*.DS_Store
-ehthumbs.db
-Icon
-
-Thumbs.db
-._*
-
-# Vim generated files #
-#######################
-*.un~
-
-# SASS #
-########
-.sass-cache
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
