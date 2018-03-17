@@ -28,6 +28,7 @@ class Wheels extends Migration
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
 
+            // this changed to a many-to-many
             $table->integer('compatibility_id')->unsigned();
             $table->foreign('compatibility_id')->references('id')->on('compatibilities');
 
