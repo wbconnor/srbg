@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Brakes extends Migration
+class Connections extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class Brakes extends Migration
      */
     public function up()
     {
-        Schema::create('brakes', function (Blueprint $table) {
+        Schema::create('connections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('model');
-
-            $table->integer('brand_id')->unsigned();
-            $table->foreign('brand_id')->references('id')->on('brands');
+            $table->string('name');
         }
     }
 
@@ -29,6 +26,6 @@ class Brakes extends Migration
      */
     public function down()
     {
-        Schema::drop('brakes');
+        Schema::drop('connections');
     }
 }

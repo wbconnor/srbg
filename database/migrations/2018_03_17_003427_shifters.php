@@ -13,7 +13,9 @@ class Shifters extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('shifters', function (Blueprint $table) {
+            $table->increments('id');
+        }
     }
 
     /**
@@ -23,6 +25,6 @@ class Shifters extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('shifters');
     }
 }

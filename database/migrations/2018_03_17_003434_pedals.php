@@ -13,7 +13,7 @@ class Pedals extends Migration
      */
     public function up()
     {
-        Schema::create('wheels', function (Blueprint $table) {
+        Schema::create('pedals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
             $table->boolean('clutch');
@@ -25,9 +25,6 @@ class Pedals extends Migration
 
             $table->integer('tension_id')->unsigned();
             $table->foreign('tension_id')->references('id')->on('tensions');
-
-            // add a many-to-many for Connections
-
         }
     }
 
@@ -38,6 +35,6 @@ class Pedals extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('pedals')
     }
 }
