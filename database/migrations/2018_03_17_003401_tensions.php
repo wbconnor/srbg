@@ -16,6 +16,9 @@ class Tensions extends Migration
         Schema::create('tensions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+
+            $table->timestamps();
+            $table->softDeletes();
         }
     }
 

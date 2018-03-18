@@ -19,6 +19,9 @@ class Brakes extends Migration
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
+
+            $table->timestamps();
+            $table->softDeletes();
         }
     }
 

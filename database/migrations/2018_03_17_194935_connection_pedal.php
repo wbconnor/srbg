@@ -21,6 +21,9 @@ class ConnectionPedal extends Migration
 
             $table->integer('pedal_id')->unsigned();
             $table->foreign('pedal_id')->references('id')->on('pedals');
+
+            $table->timestamps();
+            $table->softDeletes();
     }
 
     /**

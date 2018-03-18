@@ -16,6 +16,9 @@ class Compatibilities extends Migration
         Schema::create('compatibilities', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+
+            $table->timestamps();
+            $table->softDeletes();
         }
     }
 

@@ -29,6 +29,7 @@ class Wheels extends Migration
             $table->foreign('brand_id')->references('id')->on('brands');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

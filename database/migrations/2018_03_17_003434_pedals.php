@@ -25,6 +25,9 @@ class Pedals extends Migration
 
             $table->integer('tension_id')->unsigned();
             $table->foreign('tension_id')->references('id')->on('tensions');
+
+            $table->timestamps();
+            $table->softDeletes();
         }
     }
 

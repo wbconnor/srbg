@@ -21,6 +21,9 @@ class CompatibilityShifter extends Migration
 
             $table->integer('shifter_id')->unsigned();
             $table->foreign('shifter_id')->references('id')->on('shifters');
+
+            $table->timestamps();
+            $table->softDeletes();
     }
 
     /**

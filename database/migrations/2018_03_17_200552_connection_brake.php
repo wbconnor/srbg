@@ -21,6 +21,9 @@ class ConnectionBrake extends Migration
 
             $table->integer('brake_id')->unsigned();
             $table->foreign('brake_id')->references('id')->on('brakes');
+
+            $table->timestamps();
+            $table->softDeletes();
     }
 
     /**

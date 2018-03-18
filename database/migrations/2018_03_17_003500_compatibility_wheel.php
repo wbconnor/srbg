@@ -21,6 +21,9 @@ class CompatibilityWheel extends Migration
 
             $table->integer('wheel_id')->unsigned();
             $table->foreign('wheel_id')->references('id')->on('wheels');
+
+            $table->timestamps();
+            $table->softDeletes();
     }
 
     /**
