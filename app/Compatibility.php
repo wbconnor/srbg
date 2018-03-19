@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Brake extends Model
+class Compatibility extends Model
 {
     //
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class wheels extends Model
+class Wheel extends Model
 {
   use SoftDeletes;
 
