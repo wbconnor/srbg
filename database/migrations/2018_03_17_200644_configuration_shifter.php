@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Shifters extends Migration
+class ConfigurationShifter extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class Shifters extends Migration
      */
     public function up()
     {
-        Schema::create('shifters', function (Blueprint $table) {
+        Schema::create('configuration_shifter', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('model');
-            $table->boolean('hard_mount');
 
-            $table->integer('brand_id')->unsigned();
-            $table->foreign('brand_id')->references('id')->on('brands');
+            $table->integer('configuration_id')->unsigned();
+            $table->foreign('configuration_id')->references('id')->on('configurations');
+
+            $table->integer('shifter_id')->unsigned();
+            $table->foreign('shifter_id')->references('id')->on('shifters');
 
             $table->timestamps();
             $table->softDeletes();
-        }
     }
 
     /**
@@ -33,6 +33,6 @@ class Shifters extends Migration
      */
     public function down()
     {
-        Schema::drop('shifters');
+        Schema::drop('configuration_shifter');
     }
 }

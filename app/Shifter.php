@@ -14,7 +14,7 @@ class Shifter extends Model
    * @var array
    */
   protected $fillable = [
-    'name', 'hard_mount', 'brand_id', 'configuration_id'
+    'name', 'hard_mount', 'brand_id'
   ];
 
   protected $dates = ['deleted_at'];
@@ -27,5 +27,13 @@ class Shifter extends Model
 
   public function connection() {
     return $this->belongsToMany('App\Connection')->withTimestamps();
+  }
+
+  public function configuration() {
+    return $this->belongsToMany('App\Configuration')->withTimestamps();
+  }
+
+  public function brand() {
+    return $this->belongsTo('App\Brand')->withTimestamps();
   }
 }

@@ -27,4 +27,8 @@ class Pedal extends Model
   public function connection() {
     return $this->belongsToMany('App\Connection')->withTimestamps();
   }
+
+  public function brand() {
+    return $this->belongsTo('App\Brand')->withTimestamps();
+  }
 }

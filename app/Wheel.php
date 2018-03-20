@@ -33,4 +33,8 @@ class Wheel extends Model
   public function compatibility() {
     return $this->belongsToMany('App\Compatibility')->withTimestamps();
   }
+
+  public function brand() {
+    return $this->belongsTo('App\Brand')->withTimestamps();
+  }
 }
