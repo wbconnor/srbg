@@ -168,7 +168,7 @@ Vagrant.configure(2) do |config|
         args_node_packages = "npm pm2 gulp"
 
         # call node provisioner
-        # config.vm.provision :shell, privileged: false, path: "#{scripts_url}/node", args: [ args_node_version, args_node_packages ]
+        config.vm.provision :shell, privileged: false, path: "#{scripts_url}/node", args: [ args_node_version, args_node_packages ]
 
         ####
         ## npm
@@ -178,7 +178,7 @@ Vagrant.configure(2) do |config|
         args_npm_install_dir = "/vagrant"
 
         # call npm provisioner
-        # config.vm.provision :shell, privileged: false, path: "#{scripts_url}/npm", args: [ args_npm_install_dir ]
+        config.vm.provision :shell, privileged: false, path: "#{scripts_url}/npm", args: [ args_npm_install_dir ]
 
         ####
         ## ruby
