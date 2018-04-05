@@ -130,7 +130,7 @@ Vagrant.configure(2) do |config|
         ####
 
         # @param: (optional) location to run `composer install`
-        args_composer_install_dir = ""
+        args_composer_install_dir = "/vagrant"
 
         # call composer provisioner
         config.vm.provision :shell, privileged: false, path: "#{scripts_url}/composer", args: [ args_composer_install_dir ]
@@ -162,10 +162,10 @@ Vagrant.configure(2) do |config|
         ####
 
         # @param: version of node to install (e.g. 4.2.1). defaults to 'node' for the latest stable version
-        args_node_version = "node"
+        args_node_version = "v9.9.0"
 
         # @param: global node packages to install
-        args_node_packages = "npm pm2 gulp"
+        args_node_packages = "npm pm2 gulp cross-env"
 
         # call node provisioner
         config.vm.provision :shell, privileged: false, path: "#{scripts_url}/node", args: [ args_node_version, args_node_packages ]
