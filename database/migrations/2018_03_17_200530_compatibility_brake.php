@@ -24,6 +24,7 @@ class CompatibilityBrake extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

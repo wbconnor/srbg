@@ -19,7 +19,7 @@ class Brands extends Migration
 
             $table->timestamps();
             $table->softDeletes();
-        }
+        });
     }
 
     /**

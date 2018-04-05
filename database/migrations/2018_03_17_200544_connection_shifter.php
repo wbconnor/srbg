@@ -24,6 +24,7 @@ class ConnectionShifter extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

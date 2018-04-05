@@ -24,6 +24,7 @@ class CompatibilityShifter extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

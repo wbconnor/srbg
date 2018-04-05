@@ -24,6 +24,7 @@ class ConnectionBrake extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

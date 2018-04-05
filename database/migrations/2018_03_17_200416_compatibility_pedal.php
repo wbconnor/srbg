@@ -24,6 +24,7 @@ class CompatibilityPedal extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

@@ -28,7 +28,7 @@ class Pedals extends Migration
 
             $table->timestamps();
             $table->softDeletes();
-        }
+        });
     }
 
     /**
@@ -38,6 +38,6 @@ class Pedals extends Migration
      */
     public function down()
     {
-        Schema::drop('pedals')
+        Schema::drop('pedals');
     }
 }

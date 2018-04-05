@@ -24,6 +24,7 @@ class CompatibilityWheel extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

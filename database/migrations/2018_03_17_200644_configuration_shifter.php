@@ -24,6 +24,7 @@ class ConfigurationShifter extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+        });
     }
 
     /**

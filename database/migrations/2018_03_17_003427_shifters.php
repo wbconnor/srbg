@@ -23,7 +23,7 @@ class Shifters extends Migration
 
             $table->timestamps();
             $table->softDeletes();
-        }
+        });
     }
 
     /**
