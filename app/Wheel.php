@@ -14,14 +14,15 @@ class Wheel extends Model
    * @var array
    */
   protected $fillable = [
-    'model', 
-    'diameter', 
-    'rotation', 
-    'torque', 
-    'materials', 
-    'drive', 
-    'brushless_motor', 
-    'resolution', 
+    'model',
+    'description',
+    'diameter',
+    'rotation',
+    'torque',
+    'materials',
+    'drive',
+    'brushless_motor',
+    'resolution',
     'shifter_option',
     'brand_id'
   ];

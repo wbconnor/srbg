@@ -14,7 +14,12 @@ class Pedal extends Model
    * @var array
    */
   protected $fillable = [
-    'model', 'clutch', 'hard_mount', 'resolution', 'brand_id', 'tension_id'
+    'model',
+    'description',
+    'clutch',
+    'resolution',
+    'brand_id',
+    'tension_id'
   ];
 
   protected $dates = ['deleted_at'];
@@ -30,5 +35,9 @@ class Pedal extends Model
 
   public function brand() {
     return $this->belongsTo('App\Brand')->withTimestamps();
+  }
+
+  public function hard_mount() {
+    return $this->belongsTo('App\HardMount')->withTimestamps();
   }
 }

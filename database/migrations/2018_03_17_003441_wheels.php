@@ -16,6 +16,7 @@ class Wheels extends Migration
         Schema::create('wheels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
+            $table->text('description');
             $table->decimal('diameter', 2, 2);
             $table->integer('rotation');
             $table->decimal('torque', 2, 2);
@@ -24,7 +25,7 @@ class Wheels extends Migration
             $table->boolean('brushless_motor');
             $table->integer('resolution');
             $table->boolean('shifter_option');
-            
+
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
 

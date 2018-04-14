@@ -16,12 +16,18 @@ class Brakes extends Migration
         Schema::create('brakes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
+            $table->text('description');
+            $table->decimal('handle_length_inches', 2, 1);
+            $table->boolean('vibration');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
 
             $table->integer('tension_id')->unsigned();
             $table->foreign('tension_id')->references('id')->on('tensions');
+
+            $table->integer('mount_id')->unsigned();
+            $table->foreign('mount_id')->references('id')->on('hard_mount_option');
 
             $table->timestamps();
             $table->softDeletes();

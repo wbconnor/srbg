@@ -16,10 +16,14 @@ class Shifters extends Migration
         Schema::create('shifters', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
+            $table->text('description');
             $table->boolean('hard_mount');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
+
+            $table->integer('mount_id')->unsigned();
+            $table->foreign('mount_id')->references('id')->on('hard_mount_option');
 
             $table->timestamps();
             $table->softDeletes();
