@@ -74,6 +74,11 @@ class BrandsSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),
+        array(
+            'name' => 'RicmoTech',
+            'created_at' => Carbon\Carbon::now(),
+            'updated_at' => Carbon\Carbon::now()
+        ),
       );
       DB::table('brands')->insert($brands);
     }
