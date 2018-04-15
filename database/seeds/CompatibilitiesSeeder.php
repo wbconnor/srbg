@@ -44,6 +44,11 @@ class CompatibilitiesSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),
+        array(
+            'name' => 'Mac',
+            'created_at' => Carbon\Carbon::now(),
+            'updated_at' => Carbon\Carbon::now()
+        ),
       );
 
       DB::table('compatibilities')->insert($compatibilities);

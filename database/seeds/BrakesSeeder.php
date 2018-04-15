@@ -11,7 +11,7 @@ class BrakesSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('brands')->delete();
+      DB::table('brakes')->delete();
 
       $brands = array(
         array(
@@ -103,6 +103,6 @@ class BrakesSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()
         ),
       );
-      DB::table('brands')->insert($brands);
+      DB::table('brakes')->insert($brakes);
     }
 }
