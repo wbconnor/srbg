@@ -17,7 +17,6 @@ class Shifters extends Migration
             $table->increments('id');
             $table->string('model');
             $table->text('description');
-            $table->boolean('hard_mount');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');

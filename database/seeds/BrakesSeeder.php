@@ -13,7 +13,7 @@ class BrakesSeeder extends Seeder
     {
       DB::table('brakes')->delete();
 
-      $brands = array(
+      $brakes = array(
         array(
             'model' => 'Handbrake V3',
             'description' => 'Precision construction with shafts and bearings. Compact design and good force (torsion springs).',
