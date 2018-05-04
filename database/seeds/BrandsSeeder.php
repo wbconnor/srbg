@@ -80,7 +80,7 @@ class BrandsSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()
         ),
         array(
-            'name' => 'Pro-Sim',
+            'name' => 'Real Gear',
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),

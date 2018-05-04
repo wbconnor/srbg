@@ -18,7 +18,6 @@ class Pedals extends Migration
             $table->string('model');
             $table->text('description');
             $table->boolean('clutch');
-            $table->boolean('hard_mount');
             $table->integer('resolution');
 
             $table->integer('brand_id')->unsigned();
