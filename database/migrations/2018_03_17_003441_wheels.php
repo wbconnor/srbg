@@ -20,14 +20,14 @@ class Wheels extends Migration
             $table->decimal('diameter', 2, 2);
             $table->integer('rotation');
             $table->decimal('torque', 2, 2);
-            $table->string('materials');
-            $table->string('drive');
             $table->boolean('brushless_motor');
             $table->integer('resolution');
-            $table->boolean('shifter_option');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
+
+            $table->integer('drive_id')->unsigned();
+            $table->foreign('drive_id')->references('id')->on('drives');
 
             $table->timestamps();
             $table->softDeletes();

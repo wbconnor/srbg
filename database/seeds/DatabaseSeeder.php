@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         HardMountOptionSeeder::class,
         TensionsSeeder::class,
         BrandsSeeder::class,
+        DrivesSeeder::class,
         BrakesSeeder::class,
         ShiftersSeeder::class,
         PedalsSeeder::class,

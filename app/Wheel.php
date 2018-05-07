@@ -19,12 +19,10 @@ class Wheel extends Model
     'diameter',
     'rotation',
     'torque',
-    'materials',
-    'drive',
     'brushless_motor',
     'resolution',
-    'shifter_option',
-    'brand_id'
+    'brand_id',
+    'drive_id'
   ];
 
   protected $dates = ['deleted_at'];
@@ -37,5 +35,9 @@ class Wheel extends Model
 
   public function brand() {
     return $this->belongsTo('App\Brand')->withTimestamps();
+  }
+
+  public function drive() {
+    return $this->belongsTo('App\Drive')->withTimestamps();
   }
 }
