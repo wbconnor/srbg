@@ -75,17 +75,22 @@ class BrandsSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()
         ),
         array(
-            'name' => 'RicmoTech',
-            'created_at' => Carbon\Carbon::now(),
-            'updated_at' => Carbon\Carbon::now()
-        ),
-        array(
             'name' => 'Real Gear',
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),
         array(
             'name' => 'Thomas Super Wheel',
+            'created_at' => Carbon\Carbon::now(),
+            'updated_at' => Carbon\Carbon::now()
+        ),
+        array(
+            'name' => 'Sim Racing Bay',
+            'created_at' => Carbon\Carbon::now(),
+            'updated_at' => Carbon\Carbon::now()
+        ),
+        array(
+            'name' => 'Sim-plicity',
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),

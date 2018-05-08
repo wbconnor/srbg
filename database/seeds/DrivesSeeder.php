@@ -35,7 +35,7 @@ class DrivesSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()
         ),
         array(
-            'name' => 'Bungie',
+            'name' => 'Bungee',
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),
