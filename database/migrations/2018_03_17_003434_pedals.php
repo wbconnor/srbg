@@ -16,18 +16,18 @@ class Pedals extends Migration
         Schema::create('pedals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
-            $table->text('description');
-            $table->boolean('clutch');
-            $table->integer('resolution');
+            $table->text('description')->nullable();
+            $table->boolean('clutch')->nullable();
+            $table->integer('resolution')->nullable();
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
 
-            $table->integer('tension_id')->unsigned();
+            $table->integer('tension_id')->unsigned()->nullable();
             $table->foreign('tension_id')->references('id')->on('tensions');
 
-            $table->integer('mount_id')->unsigned();
-            $table->foreign('mount_id')->references('id')->on('hard_mount_option');
+            $table->integer('mount_id')->unsigned()->nullable();
+            $table->foreign('mount_id')->references('id')->on('hard_mount');
 
             $table->timestamps();
             $table->softDeletes();

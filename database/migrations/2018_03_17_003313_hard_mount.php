@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class HardMountOption extends Migration
+class HardMount extends Migration
 {
     /**
      * Run the migrations.
@@ -29,6 +29,6 @@ class HardMountOption extends Migration
      */
     public function down()
     {
-        Schema::drop('hard_mount_option');
+        Schema::drop('hard_mount');
     }
 }

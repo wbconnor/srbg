@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         CompatibilitiesSeeder::class,
         ConfiguraitonsSeeder::class,
         ConnectionsSeeder::class,
-        HardMountOptionSeeder::class,
+        HardMountSeeder::class,
         TensionsSeeder::class,
         BrandsSeeder::class,
         DrivesSeeder::class,

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class HardMountOptionSeeder extends Seeder
+class HardMountSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class HardMountOptionSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('brands')->delete();
+      DB::table('hard_mount')->delete();
 
-      $brands = array(
+      $mounts = array(
         array(
             'name' => 'Available',
             'created_at' => Carbon\Carbon::now(),
@@ -30,6 +30,6 @@ class HardMountOptionSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()
         ),
       );
-      DB::table('brands')->insert($brands);
+      DB::table('hard_mount')->insert($mounts);
     }
 }

@@ -21,14 +21,14 @@ class Connection extends Model
 
   // Relationships
   public function pedal() {
-    return $this->hasMany('App\Pedal')->withTimestamps();
+    return $this->belongsToMany('App\Pedal')->withTimestamps();
   }
 
   public function shifter() {
-    return $this->hasMany('App\Shifter')->withTimestamps();
+    return $this->belongsToMany('App\Shifter')->withTimestamps();
   }
 
   public function brake() {
-    return $this->hasMany('App\Brake')->withTimestamps();
+    return $this->belongsToMany('App\Brake')->withTimestamps();
   }
 }
