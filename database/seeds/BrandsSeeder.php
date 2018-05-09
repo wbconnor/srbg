@@ -94,6 +94,12 @@ class BrandsSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
         ),
+
+        array(
+            'name' => 'Pro-Sim',
+            'created_at' => Carbon\Carbon::now(),
+            'updated_at' => Carbon\Carbon::now()
+        ),
       );
       DB::table('brands')->insert($brands);
     }
