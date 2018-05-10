@@ -35,10 +35,17 @@ class Brake extends Model
   }
 
   public function brand() {
-    return $this->belongsTo('App\Brand')->withTimestamps();
+    return $this->belongsTo('App\Brand');
   }
 
   public function hard_mount() {
     return $this->belongsTo('App\HardMount')->withTimestamps();
+  }
+
+  public static function withBrandNames() {
+    return static::with('brand')->get()->map(function ($brake) {
+      $brake->brand_name = $brake->brand->name;
+      return $brake;
+    });
   }
 }
