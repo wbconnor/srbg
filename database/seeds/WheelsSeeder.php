@@ -313,6 +313,10 @@ class WheelsSeeder extends Seeder
           ),
         );
 
+        foreach($wheels as &$wheel) {
+          $wheel['created_at'] = Carbon\Carbon::now();
+          $wheel['updated_at'] = Carbon\Carbon::now();
+        }
         DB::table('wheels')->insert($wheels);
     }
 }
