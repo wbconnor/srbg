@@ -1,17 +1,29 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
+    <Wheels :wheels="wheels"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Wheels from './components/Wheels';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Wheels,
+  },
+  data() {
+    return {
+      wheels: [],
+    };
+  },
+  created() {
+    fetch(new Request('/api/wheels'))
+      .then(response => response.json())
+      .then((response) => {
+        this.wheels = response;
+      });
   },
 };
 </script>
