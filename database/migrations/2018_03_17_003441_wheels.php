@@ -16,17 +16,18 @@ class Wheels extends Migration
         Schema::create('wheels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('model');
-            $table->decimal('diameter', 2, 2);
-            $table->integer('rotation');
-            $table->decimal('torque', 2, 2);
-            $table->string('materials');
-            $table->string('drive');
+            $table->text('description')->nullable();
+            $table->decimal('diameter', 4, 2)->nullable();
+            $table->integer('rotation')->nullable();
+            $table->decimal('torque', 4, 2)->nullable();
             $table->boolean('brushless_motor');
-            $table->integer('resolution');
-            $table->boolean('shifter_option');
-            
+            $table->integer('resolution')->nullable();
+
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands');
+
+            $table->integer('drive_id')->unsigned()->nullable();
+            $table->foreign('drive_id')->references('id')->on('drives');
 
             $table->timestamps();
             $table->softDeletes();

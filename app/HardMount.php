@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Connection extends Model
+class HardMount extends Model
 {
   use SoftDeletes;
 
@@ -21,14 +21,14 @@ class Connection extends Model
 
   // Relationships
   public function pedal() {
-    return $this->belongsToMany('App\Pedal')->withTimestamps();
-  }
-
-  public function shifter() {
-    return $this->belongsToMany('App\Shifter')->withTimestamps();
+    return $this->hasMany('App\Pedal')->withTimestamps();
   }
 
   public function brake() {
-    return $this->belongsToMany('App\Brake')->withTimestamps();
+    return $this->hasMany('App\Brake')->withTimestamps();
+  }
+
+  public function shifter() {
+    return $this->hasMany('App\Shifter')->withTimestamps();
   }
 }

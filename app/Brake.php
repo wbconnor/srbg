@@ -14,7 +14,12 @@ class Brake extends Model
    * @var array
    */
   protected $fillable = [
-    'model', 'brand_id', 'tension_id'
+    'model',
+    'description',
+    'handle_length_inches',
+    'vibration',
+    'brand_id',
+    'tension_id'
   ];
 
   protected $dates = ['deleted_at'];
@@ -30,5 +35,9 @@ class Brake extends Model
 
   public function brand() {
     return $this->belongsTo('App\Brand')->withTimestamps();
+  }
+
+  public function hard_mount() {
+    return $this->belongsTo('App\HardMount')->withTimestamps();
   }
 }
