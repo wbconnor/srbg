@@ -31,14 +31,21 @@ class Wheel extends Model
   // Relationships
 
   public function compatibility() {
-    return $this->belongsToMany('App\Compatibility')->withTimestamps();
+    return $this->belongsToMany('App\Compatibility');
   }
 
   public function brand() {
-    return $this->belongsTo('App\Brand')->withTimestamps();
+    return $this->belongsTo('App\Brand');
   }
 
   public function drive() {
-    return $this->belongsTo('App\Drive')->withTimestamps();
+    return $this->belongsTo('App\Drive');
+  }
+
+  public static function withBrandNames() {
+    return static::with('brand')->get()->map(function ($wheel) {
+      $wheel->brand_name = $wheel->brand->name;
+      return $wheel;
+    });
   }
 }
