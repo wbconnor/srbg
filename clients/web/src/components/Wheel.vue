@@ -1,6 +1,6 @@
 <template>
   <div class="wheel">
-    <div class="wheel-id">{{wheel.id}}</div>
+    <div class="wheel-brand">{{wheel.brand_name}}</div>
     <div class="wheel-model">{{wheel.model}}</div>
     <div class="wheel-description">{{wheel.description}}</div>
   </div>
