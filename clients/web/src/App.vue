@@ -17,13 +17,19 @@ export default {
       wheels: [],
     };
   },
-  created() {
-    fetch(new Request('/api/wheels'))
-      .then(response => response.json())
-      .then((response) => {
-        this.wheels = response;
-      });
+  mounted() {
+    this.getWheels();
   },
+  methods: {
+    getWheels() {
+      const vThis = this;
+      fetch('/api/wheels').then(response => {
+        response.json().then(function (data) {
+          vThis.wheels = data;
+        })
+      });
+    }
+  }
 };
 </script>
 
