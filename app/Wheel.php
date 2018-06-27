@@ -41,4 +41,11 @@ class Wheel extends Model
   public function drive() {
     return $this->belongsTo('App\Drive')->withTimestamps();
   }
+
+  public static function withBrandNames() {
+    return static::with('brand')->get()->map(function ($wheel) {
+      $wheel->brand_name = $wheel->brand->name;
+      return $wheel;
+    });
+  }
 }
