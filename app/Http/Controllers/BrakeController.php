@@ -14,7 +14,7 @@ class BrakeController extends Controller
      */
     public function index()
     {
-        $brakes = Brake::all();
+        $brakes = Brake::withBrandNames()->all();
 
         return response()->json($brakes);
     }

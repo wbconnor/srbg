@@ -1,17 +1,43 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <table-component :data="wheels" sort-by="songs" sort-order="asc">
+      <table-column show="brand_name" label="Brand Name"></table-column>
+      <table-column show="model" label="Model"></table-column>
+      <table-column show="description" label="Description"></table-column>
+      <!-- <table-column show="songs" label="Songs" data-type="numeric"></table-column>
+      <table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"></table-column>
+      <table-column label="" :sortable="false" :filterable="false">
+        <template slot-scope="row">
+        <a :href="`#${row.firstName}`">Edit</a>
+        </template>
+      </table-column> -->
+    </table-component>
+    <!-- <Wheels :wheels="wheels"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import { TableComponent, TableColumn } from 'vue-table-component';
+import Wheels from './components/Wheels';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Wheels,
+    TableComponent,
+    TableColumn,
+  },
+  data() {
+    return {
+      wheels: [],
+    };
+  },
+  created() {
+    fetch(new Request('/api/wheels'))
+      .then(response => response.json())
+      .then((response) => {
+        this.wheels = response;
+      });
   },
 };
 </script>
